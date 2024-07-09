@@ -1,13 +1,152 @@
+/* Reset body margins and padding */
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles for the main application container */
+.app {
+  background-color: #000;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Position relative for absolute positioning of celebration */
+}
+
+/* Styles for the score section */
+.score-section {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styles for the score text */
+.score-text {
+  margin-bottom: 10px;
+}
+
+/* Styles for a perfect score */
+.perfect-score {
+  color: gold; /* Change color for perfect score */
+}
+
+/* Styles for the celebration animation */
+.celebration {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.firecracker {
+  font-size: 32px;
+  margin: 0 5px;
+  animation: firecracker 1s infinite alternate;
+}
+
+@keyframes firecracker {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* Styles for the question section */
+.question-section {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for the question count */
+.question-count {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Styles for the question text */
+.question-text {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Styles for the answer section */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Styles for the answer buttons */
+button {
+  width: 45%;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid #234668;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Styles for correct and incorrect answer feedback */
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+/* Styles for the middle score circle */
+.middle-score {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.score-circle {
+  width: 100px; /* Adjust size of the circle */
+  height: 100px; /* Adjust size of the circle */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #252d4a; /* Background color of the circle */
+  font-size: 36px; /* Adjust font size of the score */
+  color: #ffffff; /* Text color inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
 }
